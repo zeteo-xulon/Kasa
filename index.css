@@ -1,0 +1,106 @@
+:root{
+  --color-1: #FF6060;
+  --color-2: #F6F6F6;
+  --color-3: #000000;
+  --color-4: #FFFFFF;
+}
+
+@font-face {
+  font-family: Montserrat-medium;
+  src: url(./src//assets/fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: Montserrat-bold;
+  src: url(./src/assets/fonts/Montserrat-Bold.ttf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat-medium, Arial, Helvetica, sans-serif;
+}
+
+.app{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+}
+
+.main-container{
+  padding: 0rem 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.link{
+  color: var(--color-1);
+  text-decoration: none;
+}
+.link:hover{
+  text-decoration: underline;
+}
+
+.banner{
+  position: relative;
+  box-sizing: border-box;
+  height: 222px;
+}
+.banner__picture{
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.banner__shade{
+  position: absolute;
+  top:0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  background-color: rgba(0,0,0,0.3);
+}
+.banner__text{
+  z-index: 3;
+  position: absolute;
+  top: 40%;
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+
+.main{
+  background-color: #F6F6F6;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-3);
+  color: var(--color-4);
+  height: 210px;
+}
+.footer-container{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 2rem;
+}
