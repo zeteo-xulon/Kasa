@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 export default function Products(){
     const [products, setProducts] = useState([]);
-    const [ready, setReady] = useState<number>(0)
+    let [ready, setReady] = useState<number>(0)
 
     useEffect(()=>{
         fetch('./src/server/logements.json')
@@ -14,7 +14,7 @@ export default function Products(){
     },[])
 
     useEffect(()=>{
-    
+        setReady++
     }, [products])
 
     return (
