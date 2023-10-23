@@ -1,9 +1,11 @@
-import MainContainer from "../MainContainer"
+import Banner from '../Banner';
+import Products from '../Products';
 
 export default function Home(){
     return (
-        <>
-            <MainContainer />
-        </>
+        <div className='home-main'>
+            <Banner />
+            <Products />
+        </div>
     )
 }
