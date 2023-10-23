@@ -84,9 +84,48 @@
 
 
 .main{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 2rem;
   background-color: #F6F6F6;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 15px;
+}
+
+.card{
+  position: relative;
+  min-width: 300px;
+  width: 1000%;
+  max-width: 400px;
+  height: 300px;
+  border-radius: 20px;
+  background-color: #FF6060;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.card-image{
+  position: relative;
+  z-index: 1;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.card-shade{
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 37%, rgba(255,255,255,0) 100%);
+}
+.card-text{
+  z-index: 3;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 85%;
+  color:#FFFFFF;
 }
 
 

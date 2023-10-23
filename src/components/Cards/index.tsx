@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import { Logement } from "../../Models/entities";
-import Product from "../Product";
+import Card from "../Card";
 
 
-export default function Products(){
-    const [products, setProducts] = useState<Logement[]>([]);
+export default function Cards(){
+    const [cards, setCards] = useState<Logement[]>([]);
 
     useEffect(()=>{
         fetch('./src/server/logements.json')
         .then((res) =>  res.json())
-        .then((data => setProducts(data)))
+        .then((data => setCards(data)))
         .catch(err => console.log(err))
     },[])
 
@@ -17,8 +17,8 @@ export default function Products(){
     return (
         <main className="main">
             {
-                products.map((product, index) => ( 
-                    <Product key={index} data={product} /> 
+                cards.map((card, index) => ( 
+                    <Card key={index} data={card} /> 
                 ))
             }
 

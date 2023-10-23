@@ -15,3 +15,8 @@ location: string;
 equipments: string[];
 tags: string[];
 }
+
+export interface Banner {
+  image: string;
+  text: string;
+}

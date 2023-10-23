@@ -1,11 +1,12 @@
 import Banner from '../Banner';
-import Products from '../Products';
+import Cards from '../Cards';
+import { BannerInt } from "../../Models/entities"
 
-export default function Home(){
+export default function Home(props:{data: BannerInt}){
     return (
         <div className='home-main'>
-            <Banner />
-            <Products />
+            <Banner bannerData={props.data}/>
+            <Cards />
         </div>
     )
 }
