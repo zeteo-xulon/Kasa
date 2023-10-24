@@ -16,7 +16,7 @@ equipments: string[];
 tags: string[];
 }
 
-export interface Banner {
+export interface BannerInt {
   image: string;
   text: string;
 }

@@ -34,6 +34,7 @@
 }
 
 .header{
+  padding: 2rem 7% 0rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,6 +50,11 @@
 }
 .link:hover{
   text-decoration: underline;
+}
+
+
+.home-main{
+  padding: 0 7%;
 }
 
 .banner{
@@ -76,7 +82,7 @@
   z-index: 3;
   position: absolute;
   top: 40%;
-  color: #FFFFFF;
+  color: var(--color-4);
   font-size: 2.5rem;
   text-align: center;
   width: 100%;
@@ -88,8 +94,7 @@
   flex-flow: row wrap;
   justify-content: space-between;
   gap: 2rem;
-  background-color: #F6F6F6;
-  padding: 2rem;
+  background-color: var(--color-2);
   border-radius: 15px;
 }
 
@@ -100,7 +105,7 @@
   max-width: 400px;
   height: 300px;
   border-radius: 20px;
-  background-color: #FF6060;
+  background-color: var(--color-1);
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -125,9 +130,30 @@
   bottom: 20px;
   left: 20px;
   width: 85%;
-  color:#FFFFFF;
+  color: var(--color-4);
 }
 
+
+
+
+.main-404{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  height: 412px;
+}
+
+.title-404{
+  font-family: Montserrat-bold, Arial, Helvetica, sans-serif;
+  color: var(--color-1);
+  font-size: 10rem;
+}
+.text-404{
+  color: var(--color-1);
+  font-size: 1.5rem;
+}
 
 .footer{
   display: flex;
