@@ -7,7 +7,7 @@ export default function Header(){
         <header className='header'>
 
                 <Link to={"/"}>
-                <img src={kasaLogo} className="logo react" alt="React logo" />
+                <img src={kasaLogo} className="logo kasa" alt="Kasalogo" />
                 </Link>
 
                 <Nav />

@@ -20,3 +20,8 @@ export interface BannerInt {
   image: string;
   text: string;
 }
+
+export interface AboutModel {
+  title: string,
+  text: string
+}
