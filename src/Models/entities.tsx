@@ -21,7 +21,7 @@ export interface BannerInt {
   text: string;
 }
 
-export interface AboutModel {
+export interface collapseInt {
   title: string,
-  text: string
+  text: string |string[]
 }

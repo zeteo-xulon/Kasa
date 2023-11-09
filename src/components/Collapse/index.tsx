@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { AboutModel } from "../../Models/entities";
+import { collapseInt } from "../../Models/entities";
 import chevron from '../../assets/chevron.svg';
 
 
-export default function Collapse(props:{menusData: AboutModel}){
+export default function Collapse(props:{menusData: collapseInt}){
     const [chevronPosition, setChevronPosition] = useState<boolean>(false);
     function modifyChevronPosition(){
         chevronPosition === true ? setChevronPosition(false) : setChevronPosition(true)
@@ -17,14 +17,14 @@ export default function Collapse(props:{menusData: AboutModel}){
                 chevronPosition ?
                 <img 
                 src={chevron} 
-                className="chevron-up" 
+                className="chevron-down" 
                 id="chevron" 
                 onClick={ modifyChevronPosition }
                 alt="cliquez pour refermer ce que contien ce menu" />
                 :
                 <img 
                 src={chevron} 
-                className="chevron-down" 
+                className="chevron-up" 
                 id="chevron" 
                 onClick={ modifyChevronPosition }
                 alt="cliquez pour déplier ce que contien ce menu" />
@@ -33,8 +33,17 @@ export default function Collapse(props:{menusData: AboutModel}){
             
             {
                 chevronPosition ?
-                <p className="collapse-text">{props.menusData.text}</p>
-                : ""
+                    typeof props.menusData.text === "string" ? 
+                        <p className="collapse-text">{props.menusData.text}</p> 
+                        :
+                        <ul className="collapse-list">
+                            {
+                                props.menusData.text.map((listText, index) => (
+                                    <li key={"list"+index} >{listText}</li>
+                                ))
+                            }
+                        </ul>
+                    : ""
             }
         </div>
     )

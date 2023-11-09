@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { BannerInt, AboutModel } from "../../Models/entities";
+import { BannerInt, collapseInt } from "../../Models/entities";
 import Banner from "../Banner";
 import Collapse from "../Collapse";
 
 export default function About(props:{ data: BannerInt }){
-    const [collapseMenus, setCollapseMenus] = useState<AboutModel[]>([])
+    const [collapseMenus, setCollapseMenus] = useState<collapseInt[]>([])
 
     useEffect(()=>{
         fetch('./src/server/about.json')
