@@ -28,19 +28,21 @@ export default function Lodging(){
             <Gallery gallery={galleryArray} />
 
             <div className="lodging-information">
-                <div className="lodging-bloc-1">
-                    <h2 className="lodging-title">{cardData?.title}</h2>
-                    <p className="lodging-location">{cardData?.location}</p>
-                    <Tags tags={cardData?.tags as string[]} />
+                <div className="lodging-bloc-1-and-2">
+                    <div className="lodging-bloc-1">
+                        <h2 className="lodging-title">{cardData?.title}</h2>
+                        <p className="lodging-location">{cardData?.location}</p>
+                        <Tags tags={cardData?.tags as string[]} />
 
-                </div>
+                    </div>
 
-                <div className="lodging-bloc-2">
-                    <aside className="lodging-host">
-                        <p className="lodging-host-name">{cardData?.host?.name}</p>
-                        <img src={cardData?.host?.picture} className="lodging-host-picture" alt="visage de l'hote" />
-                    </aside>
-                    <Stars rating={Number(cardData?.rating) as number} />
+                    <div className="lodging-bloc-2">
+                        <aside className="lodging-host">
+                            <p className="lodging-host-name">{cardData?.host?.name}</p>
+                            <img src={cardData?.host?.picture} className="lodging-host-picture" alt="visage de l'hote" />
+                        </aside>
+                        <Stars rating={Number(cardData?.rating) as number} />
+                    </div>
                 </div>
                 <div className="lodging-collapses">
                     <Collapse menusData={{title: "Description", text:cardData?.description as string}} />

@@ -146,24 +146,117 @@
 }
 
 /*========================================*/
-/*               PAGE ABOUT               */
+/*               PAGE LODGING             */
 /*========================================*/
+.lodging-main{
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  padding: 2em;
+}
+.lodging-bloc-1-and-2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+.lodging-information{
+  display: flex;
+  flex-flow:column nowrap;
+  gap: 1rem;
+}
 
+/*===== LODGING BLOC 1 =====*/
+.lodging-bloc-1 {
+  display: flex;
+  flex-flow: column;
+  gap: .5rem;
+}
+.lodging-title{
+  color: var(--color-1);
+  font-size: 2.5rem;
+}
+.lodging-location{
+  color: var(--color-1);
+  font-size: 1rem;
+}
+.lodging-tags-container{
+  display: flex;
+  gap: 1rem;
+}
+.lodging-tag{
+  background-color: var(--color-1);
+  padding: .3rem 1.5rem;
+  border-radius: 12px;
+  color: var(--color-4);
+}
 
+/*===== LODGING BLOC 2 =====*/
+.lodging-bloc-2 {
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
+}
+.lodging-host{
+  display: flex;
+}
+.lodging-host-name{
+  color: var(--color-1);
+  white-space: break-spaces;
+  width: 52%;
+  text-align: right;
+  padding: 0rem 1rem;
+}
+.lodging-host-picture{
+  border-radius: 50%;
+  object-fit: contain;
+  height: 70px;
+  height: 70px;
+}
+.lodging-stars {
+  display: flex;
+  justify-content: flex-end;
+}
 
-/*========     GALLERY     ========*/
+/*===== LODGING COLLAPSE =====*/
+.lodging-collapses{
+  display: flex;
+  gap: 2rem;
+}
+
+/*===== GALLERY =====*/
 .gallery{
+  z-index: 1;
   position: relative;
   height: 415px;
   overflow: hidden;
   box-sizing: border-box;
 }
+.gallery-image-1{
+  z-index: 4;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.gallery-image-2{
+  z-index: 3;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
 .chevron-left{
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 0px;
   height: 10px;
   transform: rotate(270deg);
   cursor: pointer;
 }
 .chevron-right{
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  right: 0px;
   height: 10px;
   transform: rotate(90deg);
   cursor: pointer;
