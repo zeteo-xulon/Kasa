@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Gallery from "../Gallery"
 import Collapse from "../Collapse";
 import { Logement } from '../../Models/entities'
@@ -11,12 +11,15 @@ export default function Lodging(){
     const [cardData, setCardData] = useState<Logement>();
     const [galleryArray, setGalleryArray] = useState<string[]>([]);
     const { id } = useParams();
+    const navigate = useNavigate()
 
     useEffect(()=>{
         fetch('../src/server/logements.json')
         .then(res => res.json())
         .then((data) => {
             const lodgingCardData = data.filter((e:Logement)=>  e.id === id );
+            console.log(lodgingCardData)
+            if(lodgingCardData.length == 0){ return navigate("/404") }
             setCardData(lodgingCardData[0]);
             setGalleryArray(lodgingCardData[0].pictures)
         })
@@ -25,7 +28,7 @@ export default function Lodging(){
     return (
         <main className="lodging-main">
 
-            <Gallery gallery={galleryArray.length > 0 ? galleryArray : []} />
+            <Gallery gallery={galleryArray} />
 
             <div className="lodging-information">
                 <div className="lodging-bloc-1-and-2">
