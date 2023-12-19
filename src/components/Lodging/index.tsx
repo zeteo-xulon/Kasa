@@ -25,7 +25,7 @@ export default function Lodging(){
     return (
         <main className="lodging-main">
 
-            <Gallery gallery={galleryArray} />
+            <Gallery gallery={galleryArray.length > 0 ? galleryArray : []} />
 
             <div className="lodging-information">
                 <div className="lodging-bloc-1-and-2">
