@@ -17,7 +17,7 @@ export default function Gallery (props:{ gallery: string[] }){
     return (
       <div className="gallery">
 
-        { props.gallery.map((a, index)=> ( 
+        { props.gallery.map((_a, index)=> ( 
             <img
             key={"lodging-pic"+index}
             src={props.gallery[index]} 

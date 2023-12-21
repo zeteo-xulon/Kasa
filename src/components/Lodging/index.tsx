@@ -18,7 +18,6 @@ export default function Lodging(){
         .then(res => res.json())
         .then((data) => {
             const lodgingCardData = data.filter((e:Logement)=>  e.id === id );
-            console.log(lodgingCardData)
             if(lodgingCardData.length == 0){ return navigate("/404") }
             setCardData(lodgingCardData[0]);
             setGalleryArray(lodgingCardData[0].pictures)
