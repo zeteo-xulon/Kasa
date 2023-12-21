@@ -48,7 +48,9 @@
 .link:hover{
   text-decoration: underline;
 }
-
+.logo-kasa {
+  width: clamp(9rem, 40vw, 20rem);
+}
 
 
 /*========================================*/
@@ -181,6 +183,7 @@
 }
 .lodging-tags-container{
   display: flex;
+  flex-flow: row wrap;
   gap: 1rem;
 }
 .lodging-tag{
@@ -220,6 +223,7 @@
 /*===== LODGING COLLAPSE =====*/
 .lodging-collapses{
   display: flex;
+  flex-flow: row nowrap;
   gap: 2rem;
 }
 
@@ -296,7 +300,8 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  width: 80%;
+  width: 100%;
+  max-width: 1024px;
   padding: 2rem 0rem;
 }
 .collapse{
@@ -315,7 +320,11 @@
   color: var(--color-4);
   font-size: 1.3rem;
 }
-
+.collapse-list{
+  list-style: none;
+  background-color: var(--color-2);
+  padding: .5rem;
+}
 .chevron-down{
   height: 10px;
   transform: rotate(180deg);
@@ -380,5 +389,26 @@
   }
   100%{
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 748px){
+  .logo-kasa {
+    width: clamp(9rem, 40vw, 20rem);
+  }
+  
+  .lodging-bloc-1-and-2{
+    flex-flow: column;
+  }
+  .lodging-bloc-1{}
+  .lodging-bloc-2{
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+  }
+  .lodging-collapses{ flex-flow: column nowrap; }
+}
+@media screen and (max-width: 420px){
+  .logo-kasa {
+    width: clamp(4rem, 20vw, 20rem);
   }
 }
