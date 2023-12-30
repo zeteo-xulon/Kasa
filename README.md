@@ -1,5 +1,30 @@
 # React + TypeScript + Vite
 
+This project use React 18.20 with functionnal component, Typescript 5.0.2 with new bundler resolution option, and Vite as bundler at version 4.4.5 .
+
+
+To install this project, you cn download it, clone it or fork it.
+Then when it is on the computer, use :
+```bash
+npm install
+```
+
+Then to run the project in developpement phase, use :
+```bash
+npm run dev
+```
+
+The default address to watch the live preview is <http://localhost:5173> .
+
+The different interface for TypeScript typing can be found in the Models/entities.tsx file.
+
+In the final version, there will be a Node back-end server, so for now the call are simulated on the "server" component, using fetch on the Cards component.
+
+
+
+-----------------------------------------------------------
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
