@@ -94,7 +94,7 @@
   position: absolute;
   top: 40%;
   color: var(--color-4);
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 2.5rem, 7vw);
   text-align: center;
   width: 100%;
 }
@@ -392,20 +392,29 @@
   }
 }
 
-@media screen and (max-width: 748px){
+@media screen and (min-width: 100px) and (max-width: 927px){
   .logo-kasa {
     width: clamp(9rem, 40vw, 20rem);
   }
-  
-  .lodging-bloc-1-and-2{
-    flex-flow: column;
+  .link{
+    text-transform: uppercase;
   }
+  .banner__text{
+    text-align: left;
+  }
+  .lodging-bloc-1-and-2{ flex-flow: column; }
   .lodging-bloc-1{}
   .lodging-bloc-2{
     flex-flow: row-reverse nowrap;
     justify-content: space-between;
   }
   .lodging-collapses{ flex-flow: column nowrap; }
+  .main{
+    background-color: var(--color-4);
+    padding: 0px;
+  }
+  .card{ max-width: 100%; }
+  .card-link{ width: 100%; }
 }
 @media screen and (max-width: 420px){
   .logo-kasa {

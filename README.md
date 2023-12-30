@@ -20,6 +20,7 @@ The different interface for TypeScript typing can be found in the Models/entitie
 
 In the final version, there will be a Node back-end server, so for now the call are simulated on the "server" component, using fetch on the Cards component.
 
+For production version, please change base value inside vite.config.js for "/Kasa/" .
 
 
 -----------------------------------------------------------
